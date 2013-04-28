@@ -1,0 +1,34 @@
+<form style="width:600px;" id="mercury_image" class="form-horizontal">
+  <div class="form-inputs mercury-display-pane-container" style="height: 158px;">
+    <fieldset>
+      <legend>Images</legend>
+      <div class="control-group url optional">
+        <label for="image_url" class="url optional control-label">URL</label>
+        <div class="controls">
+          <div class="input-append">
+            <input type="text" value="" size="50" name="image_url" id="image_url" class="span4 string url optional">
+            <button type="button" onclick="open_image_modal('#image_url')" class="btn">Select Images</button>
+          </div>
+        </div>
+      </div>
+    </fieldset>
+    <fieldset>
+      <legend>Options</legend>
+      <div id="image_url_options" class="image-options">
+        <div class="control-group select optional">
+          <label for="image_alignment" class="select optional control-label">Alignment</label>
+          <div class="controls">
+            <select name="image_alignment" id="image_alignment" class="select optional"><option value="">None</option><option value="left">Left</option><option value="right">Right</option><option value="top">Top</option><option value="middle">Middle</option><option value="bottom">Bottom</option></select>
+          </div>
+          <label for="image_float" class="select optional control-label">Float</label>
+          <div class="controls">
+            <select name="image_float" id="image_float" class="select optional"><option value="">None</option><option value="left">Left</option><option value="right">Right</option><option value="none">None</option><option value="inherit">Inherit</option></select>
+          </div>
+        </div>
+      </div>
+    </fieldset>
+  </div>
+  <div class="form-actions mercury-display-controls">
+    <input type="submit" value="Insert Image" name="commit" class="btn btn-primary">
+  </div>
+</form>

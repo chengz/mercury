@@ -2,7 +2,7 @@
 
   <div class="form-inputs mercury-display-pane-container">
 
-    <fieldset>
+    <!--<fieldset>
       <legend>Images</legend>
       <div class="control-group url optional">
         <label class="url optional control-label" for="media_image_url">
@@ -12,13 +12,13 @@
           <input class="span6 string url optional" id="media_image_url" name="media[image_url]" size="50" type="text">
         </div>
       </div>
-    </fieldset>
+    </fieldset>-->
 
     <fieldset>
       <legend>Videos</legend>
       <div class="control-group url optional">
         <label class="url optional control-label" for="media_youtube_url">
-          <input name="media_type" type="radio" value="youtube_url"/>YouTube URL
+          <input name="media_type" type="radio" value="youtube_url" checked="checked" />YouTube URL
         </label>
         <div class="controls">
           <input class="span6 string url optional" id="media_youtube_url" name="media[youtube_url]" size="50" type="text" placeholder="http://youtu.be/Pny4hoN8eII">
@@ -36,7 +36,7 @@
 
     <fieldset>
       <legend>Options</legend>
-      <div class="media-options" id="image_url_options">
+      <!--<div class="media-options" id="image_url_options">
         <div class="control-group select optional">
           <label class="select optional control-label" for="media_image_alignment">Alignment</label>
           <div class="controls">
@@ -62,8 +62,8 @@
             </select>
           </div>
         </div>
-      </div>
-      <div class="media-options" id="youtube_url_options" style="display:none">
+      </div>-->
+      <div class="media-options" id="youtube_url_options">
         <div class="control-group number optional">
           <label class="number optional control-label" for="media_youtube_width">Width</label>
           <div class="controls">
