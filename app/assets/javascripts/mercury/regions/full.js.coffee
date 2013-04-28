@@ -130,7 +130,7 @@ class @Mercury.Regions.Full extends Mercury.Region
       image = jQuery(event.target).closest('img', @element)
       if image.length
         @selection().selectNode(image.get(0), true)
-        Mercury.trigger('button', {action: 'insertMedia'})
+        Mercury.trigger('button', {action: 'insertImage'})
 
     @element.on 'mouseup', =>
       return if @previewing
