@@ -190,6 +190,8 @@ class @Mercury.Modal
         else
           jQuery.extend(@, Mercury.lightviewHandlers[@options.handler])
           @initialize()
+      else if typeof(@options.handler) == 'function'
+        @options.handler.call(@)
 
     @element.localize(Mercury.locale()) if Mercury.config.localization.enabled
     @element.find('.modal-close').on('click', @hide)
