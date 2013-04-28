@@ -104,7 +104,7 @@ class @Mercury.Snippet
     Mercury.modal Snippet.optionsUrl(@name), {
       title: 'Snippet Options',
       handler: 'insertSnippet',
-      loadType: 'GET',
+      loadType: Mercury.config.snippets.method,
       loadData: @options
     }
 
