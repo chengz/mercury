@@ -23,6 +23,7 @@
 #= require ./toolbar.button_group
 #= require ./toolbar.expander
 #= require ./tooltip
+#= require ./template
 #= require ./snippet
 #= require ./snippet_toolbar
 #= require ./region

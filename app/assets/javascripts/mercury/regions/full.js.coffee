@@ -96,6 +96,10 @@ class @Mercury.Regions.Full extends Mercury.Region
         @focus()
         Mercury.Snippet.displayOptionsFor(jQuery(snippetPlaceHolder).data('snippet'), {}, jQuery(snippetPlaceHolder).data('options'))
         @document.execCommand('undo', false, null)
+      if templatePlaceHolder = @element.find('img[data-template]').get(0)
+        @focus()
+        Mercury.Template.display(jQuery(templatePlaceHolder).data('template'))
+        @document.execCommand('undo', false, null)
 
     # custom paste handling: we have to do some hackery to get the pasted content since it's not exposed normally
     # through a clipboard in firefox (heaven forbid), and to keep the behavior across all browsers, we manually detect
@@ -440,6 +444,10 @@ class @Mercury.Regions.Full extends Mercury.Region
     insertImage: (selection, options) -> @execCommand('insertHTML', {value: jQuery('<img/>', options.value)})
 
     insertTable: (selection, options) -> @execCommand('insertHTML', {value: options.value})
+
+    insertTemplate: (selection, options) ->
+      template = options.value
+      selection.insertNode(template.getHTML(@document))
 
     insertLink: (selection, options) ->
       anchor = jQuery("<#{options.value.tagName}>", @document).attr(options.value.attrs).html(options.value.content)
