@@ -3,6 +3,7 @@ class @Mercury.Snippet
   @all: []
 
   @displayOptionsFor: (name, options = {}, displayOptions = true) ->
+    @displayOptionsFlag = displayOptions
     if displayOptions
       Mercury.modal @optionsUrl(name), jQuery.extend({
         title: 'Snippet Options'
@@ -72,7 +73,7 @@ class @Mercury.Snippet
   getHTML: (context, callback = null) ->
     element = jQuery("<#{@wrapperTag}>", {
       class: "#{@name}-snippet snippet-section"
-      contenteditable: "false"
+      contenteditable: "true"
       'data-snippet': @identity
       'data-version': @version
     }, context)
